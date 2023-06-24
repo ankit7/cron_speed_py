@@ -74,7 +74,6 @@ async def psi(storeObj):
   storeUrl = storeObj["storeUrl"]
   print("Checking speed score for ", storeUrl)
   # sample end point
-  # https://www.googleapis.com/pagespeedonline/v5/runPagespeed\?url\=https://www.google.com\&category\=performance\&strategy\=desktop\&key\=AIzaSyAJbZjxV8XgEa7GKu3xCqx5larIdMwc90c
   baseUrl = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
   query = f"?url=https://{storeUrl}&category=performance&strategy=desktop&key={PAGE_SPEED_KEY}"
   endpoint = baseUrl + query
