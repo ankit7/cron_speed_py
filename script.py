@@ -85,6 +85,8 @@ async def psi(storeObj):
         print({"storeUrl": storeUrl, "score": score})
         return {"storeUrl": storeUrl, "score": score, "storeId": storeObj["storeId"]}
     except  Exception as e:
+      json = await resp.json()
+      print("Error Response", json)
       print(e)
 
 async def main():
@@ -102,12 +104,12 @@ async def main():
     tasks.append(asyncio.ensure_future(psi(item)))
   # array of storeUrl/score
   psiResults = await asyncio.gather(*tasks)
-  print(psiResults)
 
   # update score values in DB
-
   speedScoreColl = getColl("speedscores")
   for item in psiResults:
+    if (item == None):
+      continue
     result = speedScoreColl.insert_one({
       "storeId": item["storeId"],
       "scores": {
