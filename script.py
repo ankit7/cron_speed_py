@@ -3,12 +3,11 @@ import asyncio
 import aiohttp
 from pymongo import MongoClient
 from datetime import datetime
+from dotenv import load_dotenv
 
 
 # load env variables
-if os.getenv("PIPENV_YES") == None:
-  from dotenv import load_dotenv
-  load_dotenv()
+load_dotenv()
 
 print(os.environ)
 print(os.getenv("PAGE_SPEED_KEY"))
