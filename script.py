@@ -10,6 +10,9 @@ if os.getenv("PIPENV_YES") == None:
   from dotenv import load_dotenv
   load_dotenv()
 
+print(os.getenv("PAGE_SPEED_KEY"))
+print(os.getenv("MONGO_URI"))
+print(os.getenv("MONGO_DBNAME"))
 
 # summary for speed update task
 NOT_LIVE_STORES = []
@@ -18,7 +21,7 @@ SCORES_UPDATED = 0
 # get env variables
 PAGE_SPEED_KEY = os.getenv("PAGE_SPEED_KEY")
 MONGO_URI = os.getenv("MONGO_URI")
-MONGO_DBNAME=os.getenv("MONGO_DBNAME")
+MONGO_DBNAME= os.getenv("MONGO_DBNAME")
 
 # get collection
 def getColl(collName):
