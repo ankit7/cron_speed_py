@@ -3,16 +3,7 @@ import asyncio
 import aiohttp
 from pymongo import MongoClient
 from datetime import datetime
-from dotenv import load_dotenv
 
-
-# load env variables
-load_dotenv()
-
-print(os.environ)
-print(os.getenv("PAGE_SPEED_KEY"))
-print(os.getenv("MONGO_URI"))
-print(os.getenv("MONGO_DBNAME"))
 
 # summary for speed update task
 NOT_LIVE_STORES = []
