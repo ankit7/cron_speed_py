@@ -132,4 +132,4 @@ async def main():
   print("Stores not live", len(NOT_LIVE_STORES))
   print("URLs for not live stores", NOT_LIVE_STORES)
 
-# asyncio.run(main())
+asyncio.run(main())
