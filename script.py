@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import os
 import asyncio
 import aiohttp
@@ -7,7 +6,10 @@ from datetime import datetime
 
 
 # load env variables
-load_dotenv()
+if os.getenv("PIPENV_YES") == None:
+  from dotenv import load_dotenv
+  load_dotenv()
+
 
 # summary for speed update task
 NOT_LIVE_STORES = []
@@ -130,4 +132,4 @@ async def main():
   print("Stores not live", len(NOT_LIVE_STORES))
   print("URLs for not live stores", NOT_LIVE_STORES)
 
-asyncio.run(main())
+# asyncio.run(main())
