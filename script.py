@@ -10,6 +10,7 @@ if os.getenv("PIPENV_YES") == None:
   from dotenv import load_dotenv
   load_dotenv()
 
+print(os.environ)
 print(os.getenv("PAGE_SPEED_KEY"))
 print(os.getenv("MONGO_URI"))
 print(os.getenv("MONGO_DBNAME"))
