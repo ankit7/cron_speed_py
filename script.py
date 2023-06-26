@@ -1,9 +1,13 @@
+from dotenv import load_dotenv
 import os
 import asyncio
 import aiohttp
 from pymongo import MongoClient
 from datetime import datetime
 
+
+# load env variables
+load_dotenv()
 
 # summary for speed update task
 NOT_LIVE_STORES = []
@@ -12,7 +16,7 @@ SCORES_UPDATED = 0
 # get env variables
 PAGE_SPEED_KEY = os.getenv("PAGE_SPEED_KEY")
 MONGO_URI = os.getenv("MONGO_URI")
-MONGO_DBNAME= os.getenv("MONGO_DBNAME")
+MONGO_DBNAME=os.getenv("MONGO_DBNAME")
 
 # get collection
 def getColl(collName):

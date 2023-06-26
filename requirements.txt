@@ -9,4 +9,5 @@ frozenlist==1.3.3
 idna==3.4
 multidict==6.0.4
 pymongo==4.4.0
+python-dotenv @ https://files.pythonhosted.org/packages/44/2f/62ea1c8b593f4e093cc1a7768f0d46112107e790c3e478532329e434f00b/python_dotenv-1.0.0-py3-none-any.whl
 yarl==1.9.2
